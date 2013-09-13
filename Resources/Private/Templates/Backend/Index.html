@@ -1,0 +1,68 @@
+<f:be.container pageTitle="Pathfinder">
+
+    <div id="typo3-inner-docbody">
+
+        <button style="float:right" onclick="location.href='{f:uri.action(action:'missing')}'"">Show 404s</button>
+
+        <h2>Pathfinder</h2>
+
+        <f:form action="index" name="search" object="{search}">
+            <f:form.textfield property="query" size="50" style="padding: 2px"/>
+            <f:form.submit value="Search"/>
+        </f:form>
+
+        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+            <tr>
+                <td width="49%">
+
+                    <h3>Paths (<f:count subject="{cache}"/>)</h3>
+
+                    <table border="0" cellspacing="0" cellpadding="0" class="typo3-dblist">
+                        <tbody>
+                        <tr class="t3-row-header">
+                            <td>Id</td>
+                            <td>Path</td>
+                            <td>Page</td>
+                        </tr>
+                        <f:for each="{cache}" as="item">
+                            <tr class="db_list_normal">
+                                <td>{item.uid}</td>
+                                <td><a target="_blank" href="/{item.path}" title="Open path">{item.path}</a></td>
+                                <td><a href="mod.php?M=web_list&id={item.pid}" title="Open page">{item.pid}</a></td>
+                            </tr>
+                        </f:for>
+                        </tbody>
+                    </table>
+
+                </td>
+                <td width="1%">
+
+                </td>
+                <td width="49%">
+
+                    <h3>History Paths (<f:count subject="{history}"/>)</h3>
+
+                    <table border="0" cellspacing="0" cellpadding="0" class="typo3-dblist">
+                        <tbody>
+                        <tr class="t3-row-header">
+                            <td>Id</td>
+                            <td>Path</td>
+                            <td>Page</td>
+                        </tr>
+                        <f:for each="{history}" as="item">
+                            <tr class="db_list_normal">
+                                <td>{item.uid}</td>
+                                <td><a target="_blank" href="/{item.path}" title="Open path">{item.path}</a></td>
+                                <td><a href="mod.php?M=web_list&id={item.pid}" title="Open page">{item.pid}</a></td>
+                            </tr>
+                        </f:for>
+                        </tbody>
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+
+    </div>
+
+</f:be.container>

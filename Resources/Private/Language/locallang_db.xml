@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <type>database</type>
+        <description>pathfinder tca</description>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <label index="prependAtCopy">(Copy)</label>
+            <label index="uid">UID</label>
+            <label index="pid">Page ID</label>
+            <label index="path">Path</label>
+            <label index="history">History</label>
+            <label index="excludepath">Exclude From Path</label>
+            <label index="exclude">Exclude</label>
+        </languageKey>
+    </data>
+</T3locallang>

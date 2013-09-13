@@ -1,0 +1,28 @@
+<f:be.container pageTitle="Pathfinder">
+
+    <div id="typo3-inner-docbody">
+
+        <button style="float:right" onclick="location.href='{f:uri.action(action:'index')}'"">Back</button>
+
+        <h2>Pathfinder</h2>
+
+        <h3>Missing Paths 404s (<f:count subject="{paths}"/>) <button onclick="location.href='{f:uri.action(action:'clearMissing')}'"">Clear</button></h3>
+
+        <table border="0" cellspacing="0" cellpadding="0" class="typo3-dblist">
+            <tbody>
+            <tr class="t3-row-header">
+                <td>Count</td>
+                <td>Path</td>
+            </tr>
+            <f:for each="{paths}" as="item">
+                <tr class="db_list_normal">
+                    <td>{item.counter}</td>
+                    <td><a target="_blank" href="{baseurl}{item.path}" title="Open path">{item.path}</a></td>
+                </tr>
+            </f:for>
+            </tbody>
+        </table>
+
+    </div>
+
+</f:be.container>
