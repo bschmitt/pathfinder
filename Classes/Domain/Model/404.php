@@ -28,7 +28,7 @@
  *
  * @author Björn Schmitt
  */
-class Tx_Pathfinder_Domain_Model_404
+class Tx_Pathfinder_Domain_Model_404 extends Tx_Extbase_DomainObject_AbstractEntity
 {
 
 	/**
@@ -50,8 +50,7 @@ class Tx_Pathfinder_Domain_Model_404
 	 * @param int $counter
 	 * @return Tx_Pathfinder_Domain_Model_404
 	 */
-	public function setCounter($counter)
-	{
+	public function setCounter($counter) {
 		$this->counter = $counter;
 		return $this;
 	}
@@ -59,8 +58,7 @@ class Tx_Pathfinder_Domain_Model_404
 	/**
 	 * @return int
 	 */
-	public function getCounter()
-	{
+	public function getCounter() {
 		return $this->counter;
 	}
 
@@ -68,8 +66,7 @@ class Tx_Pathfinder_Domain_Model_404
 	 * @param string $path
 	 * @return Tx_Pathfinder_Domain_Model_404
 	 */
-	public function setPath($path)
-	{
+	public function setPath($path) {
 		$this->path = $path;
 		return $this;
 	}
@@ -77,8 +74,7 @@ class Tx_Pathfinder_Domain_Model_404
 	/**
 	 * @return string
 	 */
-	public function getPath()
-	{
+	public function getPath() {
 		return $this->path;
 	}
 
@@ -86,8 +82,7 @@ class Tx_Pathfinder_Domain_Model_404
 	 * @param int $uid
 	 * @return Tx_Pathfinder_Domain_Model_404
 	 */
-	public function setUid($uid)
-	{
+	public function setUid($uid) {
 		$this->uid = $uid;
 		return $this;
 	}
@@ -95,9 +90,7 @@ class Tx_Pathfinder_Domain_Model_404
 	/**
 	 * @return int
 	 */
-	public function getUid()
-	{
+	public function getUid() {
 		return $this->uid;
 	}
-
 }

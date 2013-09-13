@@ -28,7 +28,7 @@
  *
  * @author Björn Schmitt
  */
-class Tx_Pathfinder_Domain_Model_Cache
+class Tx_Pathfinder_Domain_Model_Cache extends Tx_Extbase_DomainObject_AbstractEntity
 {
 
 	/**
@@ -70,8 +70,7 @@ class Tx_Pathfinder_Domain_Model_Cache
 	 * @param string $dependencies
 	 * @return Tx_Pathfinder_Domain_Model_Cache
 	 */
-	public function setDependencies($dependencies)
-	{
+	public function setDependencies($dependencies) {
 		$this->dependencies = $dependencies;
 		return $this;
 	}
@@ -79,8 +78,7 @@ class Tx_Pathfinder_Domain_Model_Cache
 	/**
 	 * @return string
 	 */
-	public function getDependencies()
-	{
+	public function getDependencies() {
 		return $this->dependencies;
 	}
 
@@ -88,8 +86,7 @@ class Tx_Pathfinder_Domain_Model_Cache
 	 * @param string $mpvar
 	 * @return Tx_Pathfinder_Domain_Model_Cache
 	 */
-	public function setMpvar($mpvar)
-	{
+	public function setMpvar($mpvar) {
 		$this->mpvar = $mpvar;
 		return $this;
 	}
@@ -97,8 +94,7 @@ class Tx_Pathfinder_Domain_Model_Cache
 	/**
 	 * @return string
 	 */
-	public function getMpvar()
-	{
+	public function getMpvar() {
 		return $this->mpvar;
 	}
 
@@ -106,8 +102,7 @@ class Tx_Pathfinder_Domain_Model_Cache
 	 * @param string $path
 	 * @return Tx_Pathfinder_Domain_Model_Cache
 	 */
-	public function setPath($path)
-	{
+	public function setPath($path) {
 		$this->path = $path;
 		return $this;
 	}
@@ -115,8 +110,7 @@ class Tx_Pathfinder_Domain_Model_Cache
 	/**
 	 * @return string
 	 */
-	public function getPath()
-	{
+	public function getPath() {
 		return $this->path;
 	}
 
@@ -124,8 +118,7 @@ class Tx_Pathfinder_Domain_Model_Cache
 	 * @param int $pid
 	 * @return Tx_Pathfinder_Domain_Model_Cache
 	 */
-	public function setPid($pid)
-	{
+	public function setPid($pid) {
 		$this->pid = $pid;
 		return $this;
 	}
@@ -133,8 +126,7 @@ class Tx_Pathfinder_Domain_Model_Cache
 	/**
 	 * @return int
 	 */
-	public function getPid()
-	{
+	public function getPid() {
 		return $this->pid;
 	}
 
@@ -142,8 +134,7 @@ class Tx_Pathfinder_Domain_Model_Cache
 	 * @param int $rootpage
 	 * @return Tx_Pathfinder_Domain_Model_Cache
 	 */
-	public function setRootpageId($rootpage)
-	{
+	public function setRootpageId($rootpage) {
 		$this->rootpage = $rootpage;
 		return $this;
 	}
@@ -151,8 +142,7 @@ class Tx_Pathfinder_Domain_Model_Cache
 	/**
 	 * @return int
 	 */
-	public function getRootpage()
-	{
+	public function getRootpage() {
 		return $this->rootpage;
 	}
 
@@ -160,8 +150,7 @@ class Tx_Pathfinder_Domain_Model_Cache
 	 * @param int $sysLanguageUid
 	 * @return Tx_Pathfinder_Domain_Model_Cache
 	 */
-	public function setSysLanguageUid($sysLanguageUid)
-	{
+	public function setSysLanguageUid($sysLanguageUid) {
 		$this->sysLanguageUid = $sysLanguageUid;
 		return $this;
 	}
@@ -169,8 +158,7 @@ class Tx_Pathfinder_Domain_Model_Cache
 	/**
 	 * @return int
 	 */
-	public function getSysLanguageUid()
-	{
+	public function getSysLanguageUid() {
 		return $this->sysLanguageUid;
 	}
 
@@ -178,8 +166,7 @@ class Tx_Pathfinder_Domain_Model_Cache
 	 * @param int $uid
 	 * @return Tx_Pathfinder_Domain_Model_Cache
 	 */
-	public function setUid($uid)
-	{
+	public function setUid($uid) {
 		$this->uid = $uid;
 		return $this;
 	}
@@ -187,9 +174,7 @@ class Tx_Pathfinder_Domain_Model_Cache
 	/**
 	 * @return int
 	 */
-	public function getUid()
-	{
+	public function getUid() {
 		return $this->uid;
 	}
-
 }

@@ -28,7 +28,7 @@
  *
  * @author Björn Schmitt
  */
-class Tx_Pathfinder_Domain_Model_Search
+class Tx_Pathfinder_Domain_Model_Search extends Tx_Extbase_DomainObject_AbstractEntity
 {
 
 	/**
@@ -40,8 +40,7 @@ class Tx_Pathfinder_Domain_Model_Search
 	 * @param string $query
 	 * @return Tx_Pathfinder_Domain_Model_Search
 	 */
-	public function setQuery($query)
-	{
+	public function setQuery($query) {
 		$this->query = $query;
 		return $this;
 	}
@@ -49,9 +48,7 @@ class Tx_Pathfinder_Domain_Model_Search
 	/**
 	 * @return string
 	 */
-	public function getQuery()
-	{
+	public function getQuery() {
 		return $this->query;
 	}
-
 }
