@@ -27,7 +27,7 @@
                         <f:for each="{cache}" as="item">
                             <tr class="db_list_normal">
                                 <td>{item.uid}</td>
-                                <td><a target="_blank" href="/{item.path}" title="Open path">{item.path}</a></td>
+                                <td><a target="_blank" href="/{langCode}{item.path}" title="Open path">{item.path}</a></td>
                                 <td><a href="mod.php?M=web_list&id={item.pid}" title="Open page">{item.pid}</a></td>
                             </tr>
                         </f:for>
@@ -52,7 +52,7 @@
                         <f:for each="{history}" as="item">
                             <tr class="db_list_normal">
                                 <td>{item.uid}</td>
-                                <td><a target="_blank" href="/{item.path}" title="Open path">{item.path}</a></td>
+                                <td><a target="_blank" href="/{langCode}{item.path}" title="Open path">{item.path}</a></td>
                                 <td><a href="mod.php?M=web_list&id={item.pid}" title="Open page">{item.pid}</a></td>
                             </tr>
                         </f:for>

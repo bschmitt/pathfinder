@@ -32,6 +32,19 @@ class Tx_Pathfinder_Controller_BackendController extends Tx_Extbase_MVC_Controll
 {
 
 	/**
+	 * @return string
+	 */
+	protected function getDefaultLanguageCode() {
+		if (file_exists(PATH_typo3conf . 'ext/pathfinder/settings.php')) {
+			$settings = include(PATH_typo3conf . 'ext/pathfinder/settings.php');
+			if (isset($settings['defaultLanguageCode'])) {
+				return $settings['defaultLanguageCode'] . '/';
+			}
+		}
+		return '';
+	}
+
+	/**
 	 * @param Tx_Pathfinder_Domain_Model_Search $search
 	 * @dontvalidate $search
 	 */
@@ -61,6 +74,7 @@ class Tx_Pathfinder_Controller_BackendController extends Tx_Extbase_MVC_Controll
 				)
 			);
 		}
+		$this->view->assign('langCode' , $this->getDefaultLanguageCode());
 	}
 
 	/**
@@ -77,6 +91,7 @@ class Tx_Pathfinder_Controller_BackendController extends Tx_Extbase_MVC_Controll
 			)
 		);
 		$this->view->assign('baseurl' , 'http://' . $_SERVER['SERVER_NAME'] . '/');
+		$this->view->assign('langCode' , $this->getDefaultLanguageCode());
 	}
 
 	/**
